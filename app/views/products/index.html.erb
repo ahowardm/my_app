@@ -1,18 +1,7 @@
 <h1>Listing products</h1>
 
 <div class="container-fluid">
-  <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-        <h1><%= product.name %></h1>
-        <p><%= product.description %></p>
-        <p><%= product.colour %></p>
-        <p><%= product.price %></p>
-        <!-- <strong>$ 42</strong> -->
-      </div><!-- /col -->
-    <% end %>
-  </div>
+  <%= render @products %>
 </div>
 
 <br>
