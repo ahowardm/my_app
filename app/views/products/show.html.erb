@@ -1,29 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <p>
+        <strong>
+          <%= @product.name %>
+        </strong>
+      </p>
+      <blockquote>
+      <p>
+          <%= @product.description %>
+      </p>
+      <p>
+        <strong>Color:</strong>
+        <%= @product.colour %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @product.colour %>
-</p>
-
-<p>
-  <strong>Price</strong>
-  <%= @product.price %>
-</p>
+      <p>
+        <strong>It can be yours for just $
+          <%= @product.price %>
+        </strong>  
+      </p>
+      </blockquote>
+    </div>
+    <div class="col-md-6 foto-producto">
+        <%= image_tag @product.image_url %>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

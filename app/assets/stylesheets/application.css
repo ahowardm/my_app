@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ .overlay h1{ 
+  color: white;
+  position: absolute;
+  z-index: 12;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/*.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}*/
+
+.foto-producto img {
+  width: 100%;
+}
+
+
