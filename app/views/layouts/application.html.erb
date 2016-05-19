@@ -36,6 +36,13 @@
             <li><%= link_to "About", static_pages_about_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
           </ul>
+
+          <%= form_tag("/products", method: "get", :class => "navbar-form navbar-right") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          <% end %>
+            
         </div><!-- nav -->
       </div><!-- end nav container -->
     </nav> <!-- end navbar -->
