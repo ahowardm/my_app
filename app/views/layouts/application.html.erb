@@ -12,7 +12,7 @@
   <body>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <nav class="navbar navbar-inverse navbar-wrapper" role="navigation">
+    <nav class="navbar navbar-default navbar-wrapper" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="projectName navbar-brand">
-            <a href="#">Bike Berlin</a>
+            <%= link_to "Bike Berlin", root_path %>
           </div> <!-- end projectName -->
         </div> <!-- end navbar-header -->
         <div class="collapse navbar-collapse">
@@ -36,6 +36,15 @@
             <li><%= link_to "About", static_pages_about_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
           </ul>
+          <ul class="nav pull-right">
+            <li>
+              <% if user_signed_in? %>
+                <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+                <% else %>
+                <%= link_to "Login", new_user_session_path %>
+              <% end %>
+            </li>
+          </ul>
 
           <%= form_tag("/products", method: "get", :class => "navbar-form navbar-right") do %>
             <%= label_tag(:q, "Search for:") %>
@@ -46,6 +55,10 @@
         </div><!-- nav -->
       </div><!-- end nav container -->
     </nav> <!-- end navbar -->
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
     <footer class="footer">
       <div class="container">
