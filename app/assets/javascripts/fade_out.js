@@ -1,1 +1,3 @@
-$(".alert").delay(300).fadeOut(200);
+$(document).ready(function() {
+  $("p.alert").delay(900).fadeOut(800);
+});
