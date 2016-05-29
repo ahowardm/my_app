@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div class="col-md-4">
       <p>
@@ -22,10 +22,24 @@
           <%= @product.price %>
         </strong>  
       </p>
+      <p>
+        Average Rating: 
+        <div class="rated" data-score="<%= @product.average_rating %>"></div>
+      </p>
       </blockquote>
     </div>
     <div class="col-md-6 foto-producto">
         <%= image_tag @product.image_url %>
+    </div>
+    <div class="col-md-6 pull-right">
+      <p>
+        <%= render 'new_comment' %>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p>
+        <%= render 'comments' %>
+      </p>
     </div>
   </div>
 </div>
