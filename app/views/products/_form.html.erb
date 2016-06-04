@@ -13,23 +13,23 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name, :class => "form-control" %>
+    <%= f.text_field :name, required: true, :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description, :class => "form-control" %>
+    <%= f.text_area :description, required: true,  :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :image_url %><br>
-    <%= f.text_field :image_url, :class => "form-control" %>
+    <%= f.text_field :image_url, required: true, :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :color %><br>
-    <%= f.text_field :colour, :class => "form-control" %>
+    <%= f.text_field :colour, required: true, :class => "form-control" %>
   </div>
   <div class="field">
     <%= f.label :price %><br>
-    <%= f.text_field :price, :class => "form-control" %>
+    <%= f.text_field :price, required: true, :class => "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit "Create Product", :class => "btn-primary" %>
