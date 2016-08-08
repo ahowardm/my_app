@@ -1,4 +1,4 @@
-<% if cuenta%3 == 0 %>  
+<% if product.cuenta%3 == 0 %>  
   <div class="clearfix visible-md-block visible-lg-block"></div>
  <% end %> 
 <div class="col-sm-2 col-md-4">
@@ -9,4 +9,5 @@
     <p><%= product.colour %></p>
     <p><%= product.price %></p>
   </blockquote>
+  <% product.cuenta = product.cuenta + 1%>
 </div><!-- /col -->
