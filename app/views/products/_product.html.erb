@@ -1,4 +1,6 @@
-<div class="clearfix visible-md-block visible-lg-inline"></div>
+<% if cuenta%3 == 0 %>  
+  <div class="clearfix visible-md-block visible-lg-block"></div>
+ <% end %> 
 <div class="col-sm-2 col-md-4">
   <%= image_tag(product.image_url, class: "img-responsive") %>
   <h1><%= link_to product.name, product %></h1>
