@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyApp</title>
+    <title>Bike Santiago</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="projectName navbar-brand">
-            <%= link_to "Bike Berlin", root_path %>
+            <%= link_to "Bike Santiago", root_path %>
           </div> <!-- end projectName -->
         </div> <!-- end navbar-header -->
         <div class="collapse navbar-collapse">
@@ -62,8 +62,10 @@
     <% if alert %>
       <p class="alert alert-danger" role="alert"><%= alert %></p>
     <% end %>
-
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    
     <footer class="footer">
       <div class="container">
         <p class="text-muted">&copy; 2016 Bike Berlin</p>
