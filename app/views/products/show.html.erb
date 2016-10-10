@@ -38,6 +38,11 @@
     </div>
     <div class="col-md-6">
       <p>
+        <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </p>
+      <p>
         <%= render 'comments' %>
         <%= will_paginate @comments %>
       </p>
@@ -45,8 +50,5 @@
   </div>
 </div>
 
-<%= form_tag "/payments/create" do %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-<% end %>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
