@@ -13,7 +13,7 @@ class PaymentsController < ApplicationController
       )
     
     if charge.paid
-      Order.create(@product, @user, @product.price)
+      Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
     end
 
     rescue Stripe::CardError => e
