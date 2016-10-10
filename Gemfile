@@ -43,6 +43,7 @@ gem 'devise'
 gem 'cancancan'
 gem 'will_paginate', '~>3.1.0'
 gem 'rails-controller-testing'
+gem 'stripe'
 
 group :production do
   gem 'rails_12factor'
