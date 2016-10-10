@@ -3,6 +3,9 @@
 
 <div class="container">
   <div class="row">
+    <div class="col-md-6 foto-producto">
+      <%= image_tag @product.image_url, class: "img-zoom", data_zoom_image: @product.image_url %>
+    </div>
     <div class="col-md-4">
       <p>
         <strong>
@@ -28,9 +31,9 @@
       </p>
       </blockquote>
     </div>
-    <div class="col-md-6 foto-producto">
-        <%= image_tag @product.image_url %>
-    </div>
+<!--     <div class="col-md-6 foto-producto">
+        <%= image_tag @product.image_url, class: "img-zoom", data_zoom_image: @product.image_url %>
+    </div> -->
     <div class="col-md-6 pull-right">
       <p>
         <%= render 'new_comment' %>
