@@ -3,15 +3,20 @@ class PaymentsController < ApplicationController
     @product = Product.find(params[:product_id])
     @user = current_user
     token = params[:stripeToken]
+    logger.debug "XXXXXXX"
+    logger.debug "Usuario: #{@user.first_name} y producto: #{@product.name}"
+    logger.debug "XXXXXXX"
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
-        :amount => @product.price, # amount in cents, again
+        :amount => (@product.price*100).to_i, # amount in cents, again
         :currency => "usd",
         :source => token,
         :description => params[:stripeEmail]
       )
-    
+    logger.debug "XXXXXXX"
+    logger.debug "Precio: #{:amount} y descripcion: #{:description}"
+    logger.debug "XXXXXXX"
     if charge.paid
       Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
     end

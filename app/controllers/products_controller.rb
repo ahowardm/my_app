@@ -7,8 +7,10 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.where("lower(name) LIKE ?", "%#{search_term.downcase}%")
+      logger.debug "#{search_term}"
     else
       @products = Product.all
+      # byebug
     end
   end
 
