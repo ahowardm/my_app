@@ -46,6 +46,7 @@ gem 'rails-controller-testing'
 gem 'stripe'
 gem 'byebug'
 gem 'brakeman', :require => false
+gem 'dalli'
 
 group :production do
   gem 'rails_12factor'
