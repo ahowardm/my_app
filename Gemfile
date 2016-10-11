@@ -47,6 +47,7 @@ gem 'stripe'
 gem 'byebug'
 gem 'brakeman', :require => false
 gem 'dalli'
+gem 'redis-rails'
 
 group :production do
   gem 'rails_12factor'
