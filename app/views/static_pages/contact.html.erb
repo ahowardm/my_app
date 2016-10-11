@@ -1,7 +1,7 @@
 <h1>Contact Us</h1>
 
 <%= flash[:notice] %>
-
+<% cache do %>
 <div class="container">
   <%= form_tag("/static_pages/thank_you") do %>
     <div class="row">
@@ -23,3 +23,4 @@
   <%= submit_tag "Send", class: "btn-primary" %>
   <% end %>
 </div>
+<% end %>
