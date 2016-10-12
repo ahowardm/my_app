@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 <% logger.debug "Product: #{@product.name}"%>
 
-<% cache @product do %>
 <div class="container">
   <div class="row" data-product-id = "<%= @product.id %>">
     <div class="col-md-6 foto-producto">
@@ -49,7 +48,6 @@
     </div>
   </div>
 </div>
-<% end %>
 
 <%= form_tag "/payments/create" do %>
   <%= render partial: "shared/stripe_checkout_button" %>
