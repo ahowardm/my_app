@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :users, :controllers => {:registrations => "user_registrations"}
   resources :products do
     resources :comments
@@ -22,8 +21,6 @@ Rails.application.routes.draw do
   root 'products#index'
 
   post 'payments/create'
-
-  mount ActionCable.server => '/cable'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -73,5 +70,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
 end
