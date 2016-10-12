@@ -3,7 +3,7 @@
 
 <% cache @product do %>
 <div class="container">
-  <div class="row">
+  <div class="row" data-product-id = "<%= @product.id %>">
     <div class="col-md-6 foto-producto">
       <%= image_tag @product.image_url, class: "img-zoom", data_zoom_image: @product.image_url %>
     </div>
