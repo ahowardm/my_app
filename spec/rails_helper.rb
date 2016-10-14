@@ -12,6 +12,12 @@ require 'rspec/rails'
 #require 'rspec/rails'
 # note: require 'devise' after require 'rspec/rails'
 require 'devise'
+
+require 'simplecov'
+SimpleCov.start 'rails' do
+add_filter '/helpers/'
+add_filter '/mailers/'
+end
 ##
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
