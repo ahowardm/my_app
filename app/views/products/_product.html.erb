@@ -1,6 +1,6 @@
 <!-- <div class="clearfix visible-md-block"></div> -->
 <% cache product do %>
-<div class="col-sm-2 col-md-4">
+<div class="col-sm-4 col-md-4">
   <%= image_tag(product.image_url, class: "img-responsive") %>
   <% logger.debug "Product: #{product.name}" %>
   <h1><%= link_to product.name, product %></h1>
