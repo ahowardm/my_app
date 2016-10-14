@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
       @products = Product.all
       # byebug
     end
+    redspond_with @products
   end
 
   # GET /products/1
