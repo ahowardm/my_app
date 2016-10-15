@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-10-14T20:12:12-03:00">2016-10-14T20:12:12-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-10-14T20:37:09-03:00">2016-10-14T20:37:09-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -133,7 +133,7 @@
       <tr>
         <td class="strong"><a href="#017d0024131d50a02be2f6f5bf5c85aa237d87a7" class="src_link" title="app/controllers/payments_controller.rb">app/controllers/payments_controller.rb</a></td>
         <td class="red strong">10.0 %</td>
-        <td>32</td>
+        <td>33</td>
         <td>20</td>
         <td>2</td>
         <td>18</td>
@@ -331,7 +331,7 @@
       <tr>
         <td class="strong"><a href="#017d0024131d50a02be2f6f5bf5c85aa237d87a7" class="src_link" title="app/controllers/payments_controller.rb">app/controllers/payments_controller.rb</a></td>
         <td class="red strong">10.0 %</td>
-        <td>32</td>
+        <td>33</td>
         <td>20</td>
         <td>2</td>
         <td>18</td>
@@ -1710,106 +1710,112 @@
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">        :description =&gt; params[:stripeEmail]</code>
+          <code class="ruby">        :description =&gt; params[:stripeEmail] #,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">      )</code>
+          <code class="ruby">        # :receipt_email =&gt; params[:stripeEmail]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">    logger.debug &quot;XXXXXXX&quot;</code>
+          <code class="ruby">      )</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="18">
           
           
-          <code class="ruby">    logger.debug &quot;Precio: #{:amount} y descripcion: #{:description}&quot;</code>
+          <code class="ruby">    logger.debug &quot;XXXXXXX&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="19">
           
           
-          <code class="ruby">    logger.debug &quot;XXXXXXX&quot;</code>
+          <code class="ruby">    logger.debug &quot;Precio: #{:amount} y descripcion: #{:description}&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">    if charge.paid</code>
+          <code class="ruby">    logger.debug &quot;XXXXXXX&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="21">
           
           
-          <code class="ruby">      Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)</code>
+          <code class="ruby">    if charge.paid</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="missed" data-hits="0" data-linenumber="22">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">    rescue Stripe::CardError =&gt; e</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">      # The card has been declined</code>
+          <code class="ruby">    rescue Stripe::CardError =&gt; e</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">      body = e.json_body</code>
+          <code class="ruby">      # The card has been declined</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="27">
           
           
-          <code class="ruby">      err = body[:error]</code>
+          <code class="ruby">      body = e.json_body</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="28">
           
           
+          <code class="ruby">      err = body[:error]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
           <code class="ruby">      flash[:error] = &quot;Unfortunately, there was an error processing your payment: #{err[:message]}&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="missed" data-hits="0" data-linenumber="31">
           
           
           <code class="ruby">    redirect_to product_path(@product)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">end</code>

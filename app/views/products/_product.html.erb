@@ -1,5 +1,5 @@
 <!-- <div class="clearfix visible-md-block"></div> -->
-<% cache product do %>
+<%# cache product do %>
 <div class="col-sm-6 col-md-4">
   <%= image_tag(product.image_url, class: "img-responsive") %>
   <% logger.debug "Product: #{product.name}" %>
@@ -10,4 +10,4 @@
     <p><%= product.price %></p>
   </blockquote>
 </div><!-- /col -->
-<% end %>
+<%# end %>
