@@ -1,5 +1,8 @@
 var refreshRating = function(){
-	$('.rating').raty( { path: '/assets/images', scoreName: 'comment[rating]' });
+	$('.rating').raty( { path: '',
+    	starOn: '<%= image_path('star-on.png') %>',
+  		starOff: '<%= image_path('star-off.png') %>',
+  		starHalf: '<%= image_path('star-half.png') %>', scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '',
     	starOn: '<%= image_path('star-on.png') %>',
   		starOff: '<%= image_path('star-off.png') %>',
