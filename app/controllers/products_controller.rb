@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
       # byebug
     end
     # respond_with @products
-    @products
   end
 
   # GET /products/1
