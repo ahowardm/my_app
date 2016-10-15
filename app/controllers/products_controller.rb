@@ -11,13 +11,13 @@ class ProductsController < ApplicationController
       else
         @products = Product.where("lower(name) LIKE ?", "%#{search_term.downcase}%")
       end
-      
       logger.debug "#{search_term}"
     else
       @products = Product.all
       # byebug
     end
     # respond_with @products
+    @products
   end
 
   # GET /products/1
