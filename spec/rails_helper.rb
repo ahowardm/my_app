@@ -70,7 +70,8 @@ RSpec.configure do |config|
 
   ## For Devise to work:
   #config.include Devise::Test::ControllerHelpers, :type => :controller
-  config.include Devise::TestHelpers, :type => :controller
+  # config.include Devise::TestHelpers, :type => :controller
+  config.include Devise::Test::ControllerHelpers, :type => :controller
   #config.extend ControllerMacros, :type => :controller
   ##
 end
